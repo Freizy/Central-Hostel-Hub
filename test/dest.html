@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Destination file</title>
+    </head>
+    <body>
+        <h1> Welcome to This Page</h1>
+        <h1>Select a Size</h1>
+        <select id="size-options" data-update>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <h1>Select an extension</h1>
+        <select id="extentions-options">
+            <option value="exe">.exe</option>
+            <option value="png">.png</option>
+            <option value="jpg">.jpj</option>
+        </select>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedOption = urlParams.get('option');
+            document.getElementById('size-options').value = selectedOption === 'image1' ? 'small' : selectedOption === 'image2' ? 'medium' : 'large';
+        </script>    </body>
+</html>
